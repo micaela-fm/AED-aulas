@@ -9,5 +9,4 @@ fun binarySearch(a: IntArray, l: Int, r: Int, elem: Int): Int {
             binarySearch(a, l, mid - 1, elem)
         else binarySearch(a, mid+1, r, elem)
     }
-    println()
 }
