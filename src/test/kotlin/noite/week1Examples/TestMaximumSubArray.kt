@@ -5,7 +5,7 @@ import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
 class TestMaximumSubArray {
-    val maxSubArray:(Array<Double>, Int, Int)-> Triple<Int, Int, Double> = ::maximumSubArray
+    val maxSubArray:(Array<Double>, Int, Int)-> Triple<Int, Int, Double> = ::maximumSubArrayKadane
     @Test
     fun testAllNegatives() {
         val a: Array<Double> = arrayOf(-2.0, -5.0, -1.0)
@@ -37,12 +37,12 @@ class TestMaximumSubArray {
     @Test
     fun test1() {
         val a =Array(20000){ -5.0 }
-        maximumSubArray( a , 0, a.size-1)
+        maxSubArray( a , 0, a.size-1)
     }
 
     @Test
     fun test2() {
         val a =Array(1000000){ -5.0 }
-        maximumSubArray( a , 0, a.size-1)
+        maxSubArray( a , 0, a.size-1)
     }
 }
