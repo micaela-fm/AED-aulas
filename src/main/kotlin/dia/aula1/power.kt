@@ -17,6 +17,12 @@ fun powerMemorisation(a: Int, n: Int): Int {
     else z * z * a
 }
 
+//fun powerMemorisation(a: Int, n: Int): Int {
+//    if (n == 0) return 1
+//    return if (n % 2 == 0) powerMemorisation(a, n/2) * powerMemorisation(a, n/2)
+//    else powerMemorisation(a, n/2) * powerMemorisation(a, n/2) * a
+//}
+
 fun main() {
     val a = 11
     val n = 1234

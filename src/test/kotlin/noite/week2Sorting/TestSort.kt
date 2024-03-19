@@ -1,5 +1,6 @@
 package week2Sorting
 
+import week4Heap.heapSort
 import kotlin.random.Random
 import kotlin.test.*
 
@@ -7,12 +8,15 @@ import kotlin.test.*
     val N = 1000
 
     fun sortArray( a: Array<Int>, l: Int, r: Int ) =
-        insertionSort(a,l, r)
+        //insertionSort(a,l, r)
         //insertionSort(a,l, r, Int::compareTo)
+        //bubbleSort(a, l, r)
         //bubbleSortFlag(a, l, r)
         //selectionSort(a, l, r)
-        //mergeSort(a, l, r)
-        //heapSort(a, Int::compareTo)
+        //selectionSortRecursive(a, l, r)
+        //mergeSort(a,l,r)
+        //mergeSortButtonUp(a, l, r)
+        heapSort(a, Int::compareTo)
         //quickSortHybrid(a,0, a.size-1, Int::compareTo)
         //countingSort(a)
         //radixSort( a )

@@ -18,9 +18,9 @@ class TestFibonnaci {
         assertEquals( 4181, fibonnaciFunction(19))
     }
 
-/*    @Test
+    @Test
     fun test(){
         fibonnaciFunction( 500000)
     }
- */
+
 }
