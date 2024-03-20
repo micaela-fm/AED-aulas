@@ -5,6 +5,7 @@ fun merge(a: IntArray, left: Int, right: Int, b: IntArray, c: IntArray) {
     var iC = 0
     var iA = left
 
+/*
     while (iB < b.size && iC < c.size) {
         if (b[iB] <= c[iC]) {
             a[iA] = b[iB]
@@ -16,8 +17,8 @@ fun merge(a: IntArray, left: Int, right: Int, b: IntArray, c: IntArray) {
         }
         iA++
     }
+ */
 
-    /*
     // versão mais compacta
     while (iB < b.size) {
         a[iA++] = b[iB++]
@@ -25,7 +26,6 @@ fun merge(a: IntArray, left: Int, right: Int, b: IntArray, c: IntArray) {
     while (iC < c.size) {
         a[iA++] = c[iC++]
     }
-    */
 }
 
 // versão alternativa

@@ -1,6 +1,14 @@
 package dia.aula3
 
+// versão IntArray
 fun exchange(a: IntArray, i: Int, j: Int) {
+    val temp = a[i]
+    a[i] = a[j]
+    a[j] = temp
+}
+
+// versão Array<Int>
+fun exchange(a: Array<Int>, i: Int, j: Int) {
     val temp = a[i]
     a[i] = a[j]
     a[j] = temp
