@@ -1,4 +1,4 @@
-package dia.aula3
+package dia.chapter2
 
 // Complexidade temporal - O(n^2)
 // Complexidade espacial . O(1)

@@ -1,4 +1,4 @@
-package dia.aula3
+package dia.chapter2
 
 // versão IntArray
 fun exchange(a: IntArray, i: Int, j: Int) {

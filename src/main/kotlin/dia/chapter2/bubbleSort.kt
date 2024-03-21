@@ -1,6 +1,4 @@
-package dia.aula4
-
-import dia.aula3.exchange
+package dia.chapter2
 
 /*
 * Complexidade temporal:

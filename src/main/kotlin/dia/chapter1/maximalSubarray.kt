@@ -1,4 +1,4 @@
-package dia.aula2
+package dia.chapter1
 
 data class Triple(val left: Int, val sum: Int, val right: Int)
 

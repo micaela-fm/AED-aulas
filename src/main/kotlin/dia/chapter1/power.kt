@@ -1,4 +1,4 @@
-package dia.aula1// sucessão a^n, com a > 0 e n >=0
+package dia.chapter1// sucessão a^n, com a > 0 e n >=0
 // = 1, se n = 0
 // = a*a^(n-1), se n > 0
 

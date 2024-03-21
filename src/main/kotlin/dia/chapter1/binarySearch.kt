@@ -1,4 +1,4 @@
-package dia.aula2
+package dia.chapter1
 
 fun binarySearchRecursive(a: IntArray, left: Int, right: Int, elem: Int): Int {
     if(right < left) return -1

@@ -1,4 +1,4 @@
-package dia.aula4
+package dia.chapter2
 
 fun merge(a: IntArray, left: Int, right: Int, b: IntArray, c: IntArray) {
     var iB = 0

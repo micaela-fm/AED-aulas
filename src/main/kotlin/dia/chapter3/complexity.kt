@@ -1,4 +1,4 @@
-package dia.aula5
+package dia.chapter3
 
 fun eliminaEspacos(str: String): String {
     val n = str.length
