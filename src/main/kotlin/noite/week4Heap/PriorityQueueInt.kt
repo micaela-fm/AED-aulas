@@ -11,27 +11,21 @@ package week4Heap
  *      Empty (isEmpty): Verify if the priority queue is empty.
  * The implementation of a priority queue using a maxheap.
  */
-@Suppress("UNCHECKED_CAST")
 class PriorityQueueInt (val capacity:Int, val comparator:(Int, Int)-> Int)  {
     private val heap:Array<Int> = arrayOfNulls<Any>(capacity) as Array<Int>
     private var heapSize= 0
-    fun size():Int  = heapSize
-    fun isEmpty(): Boolean = size() == 0
+    fun size():Int  = TODO()
+    fun isEmpty(): Boolean = TODO()
     fun peek(): Int { // Complexity:
         check( !isEmpty() ){"illegal operation (peek): empty queue"}
-        return heap[0]
+        TODO()
     }
     fun poll( ): Int { // Complexity:
         check( !isEmpty() ){"illegal operation (poll): empty heap"}
-        val max = extractMaxHeap(heap, heapSize,comparator)
-        --heapSize
-        return max
+        TODO()
     }
     fun offer( v: Int):Boolean { // Complexity:
         if ( heapSize == capacity ) return false
-        heap[heapSize] = v
-        heapIncreaseKey(heap, heapSize, v, comparator)
-        ++heapSize
-        return true
+        TODO()
     }
 }

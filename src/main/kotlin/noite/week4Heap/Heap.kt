@@ -130,6 +130,6 @@ tailrec fun <T> heapIncreaseKey(heap: Array<T>, i: Int, value: T, compare: (T, T
 fun <T> extractMaxHeap(heap: Array<T>, heapSize: Int, compare: (T, T) -> Int): T {
     val max = heap[0]
     heap[0] = heap[heapSize-1]
-    maxHeapify( heap, heapSize-1, 0, compare)
+    maxHeapify(heap, heapSize-1, 0, compare)
     return max
 }
