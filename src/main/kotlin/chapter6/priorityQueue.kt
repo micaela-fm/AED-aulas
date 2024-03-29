@@ -86,7 +86,7 @@ fun PriorityQueue.isEmpty() = size == 0
  * @return The user with the highest priority, or null if the priority queue is empty.
  */
 fun PriorityQueue.peek(): Utente? {
-    return if (isEmpty()) null else array[0] // most prioritized at the head of the list
+    return if (isEmpty()) null else array[0] // mais prioritário à cabeça da lista
 }
 
 /**
@@ -108,11 +108,11 @@ fun PriorityQueue.offer(utente: Utente): Boolean {
  * @return The user with the highest priority, or null if the priority queue is empty.
  */
 fun PriorityQueue.poll(): Utente? {
-    val ut = peek()
+    val utente = peek()
 
-    if (ut != null) {
+    if (utente != null) {
         array[0] = array[--size]
         minHeapify(0)
     }
-    return ut
+    return utente
 }

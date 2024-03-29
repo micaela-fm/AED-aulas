@@ -36,17 +36,17 @@ fun parent(i: Int) = (i - 1) / 2
 fun maxHeapify(array: Array<Int>, n: Int, pos: Int) {
     val l = left(pos)
     val r = right(pos)
-    var largest = pos
+    var pai = pos
 
-    if (l < n && array[l] > array[largest]) {
-        largest = l
+    if (l < n && array[l] > array[pai]) {
+        pai = l
     }
-    if (r < n && array[r] > array[largest]) {
-        largest = r
+    if (r < n && array[r] > array[pai]) {
+        pai = r
     }
-    if (largest != pos) {
-        exchange(array, largest, pos)
-        maxHeapify(array, n, largest)
+    if (pai != pos) {
+        exchange(array, pai, pos)
+        maxHeapify(array, n, pai)
     }
 }
 
@@ -57,9 +57,9 @@ fun maxHeapify(array: Array<Int>, n: Int, pos: Int) {
  * @param n The size of the heap.
  */
 fun transform(array: Array<Int>, n: Int) {
-    var size = n
-    while (size > 0) {
-        exchange(array, 0, --size)
+    var size = n                            // size vai variando
+    while (size > 0) {                      // troca o primeiro valor da árvore com o último ainda não fixado
+        exchange(array, 0, --size)       // restaura a propriedade do heap a[i] <= a[pai]
         maxHeapify(array, size, 0)
     }
 }
@@ -71,10 +71,10 @@ fun transform(array: Array<Int>, n: Int) {
  * @param n The size of the array.
  */
 fun buildMaxHeap(array: Array<Int>, n: Int) {
-    var parentIndex = parent(n - 1)
-    while (parentIndex >= 0) {
-        maxHeapify(array, n, parentIndex)
-        parentIndex--
+    var pai = parent(n - 1)
+    while (pai >= 0) {
+        maxHeapify(array, n, pai)
+        pai--
     }
 }
 
