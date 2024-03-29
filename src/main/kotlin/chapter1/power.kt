@@ -1,28 +1,40 @@
-package chapter1// sucessão a^n, com a > 0 e n >=0
-// = 1, se n = 0
-// = a*a^(n-1), se n > 0
+package chapter1
 
-// esta função tem recursividade do tipo "head recursion"
-// funções cuja última instrução é a recursiva são tipo tipo "tail recursion"
-// as "tail recursion" são sempre otimizáveis pelo compilador
+/**
+ * This function calculates the power of a number in a recursive manner.
+ *
+ * @param a The base number.
+ * @param n The exponent.
+ * @return The result of a^n.
+ *
+ * Time complexity - O(n)
+ * Space complexity - O(n)
+ */
 fun powerRecursive(a: Int, n: Int): Int {
     return if (n == 0) 1
-    else a * powerRecursive(a, n-1)
+    else a * powerRecursive(a, n - 1)
 }
 
+/**
+ * This function calculates the power of a number using memoization.
+ *
+ * @param a The base number.
+ * @param n The exponent.
+ * @return The result of a^n.
+ *
+ * Time complexity - O(log n)
+ * Space complexity - O(log n)
+ */
 fun powerMemorisation(a: Int, n: Int): Int {
     if (n == 0) return 1
-    val z = powerMemorisation(a, n/2)
+    val z = powerMemorisation(a, n / 2)
     return if (n % 2 == 0) z * z
     else z * z * a
 }
 
-//fun powerMemorisation(a: Int, n: Int): Int {
-//    if (n == 0) return 1
-//    return if (n % 2 == 0) powerMemorisation(a, n/2) * powerMemorisation(a, n/2)
-//    else powerMemorisation(a, n/2) * powerMemorisation(a, n/2) * a
-//}
-
+/**
+ * The main function to test the power functions.
+ */
 fun main() {
     val a = 11
     val n = 1234
