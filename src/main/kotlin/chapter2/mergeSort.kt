@@ -1,25 +1,22 @@
 package chapter2
 
+/**
+ * This function merges two sorted arrays into a single sorted array.
+ *
+ * @param a The original array.
+ * @param left The left index from where to start the merge.
+ * @param right The right index where to end the merge.
+ * @param b The first sorted array to be merged.
+ * @param c The second sorted array to be merged.
+ *
+ * Time complexity - O(n)
+ * Space complexity - O(n)
+ */
 fun merge(a: IntArray, left: Int, right: Int, b: IntArray, c: IntArray) {
     var iB = 0
     var iC = 0
     var iA = left
 
-/*
-    while (iB < b.size && iC < c.size) {
-        if (b[iB] <= c[iC]) {
-            a[iA] = b[iB]
-            iB++ // uma vez adicionado um elemento ao array final, incrementamos o índice do array B
-        }
-        else {
-            a[iA] = c[iC]
-            iC++
-        }
-        iA++
-    }
- */
-
-    // versão mais compacta
     while (iB < b.size) {
         a[iA++] = b[iB++]
     }
@@ -28,34 +25,49 @@ fun merge(a: IntArray, left: Int, right: Int, b: IntArray, c: IntArray) {
     }
 }
 
-// versão alternativa
+/**
+ * This function merges two sorted subarrays of a single array.
+ *
+ * @param a The original array.
+ * @param left The left index from where to start the merge.
+ * @param mid The middle index where the first subarray ends and the second starts.
+ * @param right The right index where to end the merge.
+ *
+ * Time complexity - O(n)
+ * Space complexity - O(n)
+ */
 fun merge(a: IntArray, left: Int, mid: Int, right: Int) {
-    // declarar os arrays b e c
     val b = IntArray(mid - left + 1)
     val c = IntArray(right - mid)
 
-    // preencher os arrays b e c
     for (i in b.indices) {
-        b[i] = a[i+left] // para começar a substituir em a na posição left e não em a[0]
+        b[i] = a[i + left]
     }
-    for (i in c.indices){
-        c[i] = a[i+mid+1]
+    for (i in c.indices) {
+        c[i] = a[i + mid + 1]
     }
 
-    // chamada recursiva
     merge(a, left, right, b, c)
 }
 
-/*
-* Complexidade temporal: O(n lg n)
-* Complexidade espacial:
+/**
+ * This function sorts an array using the Merge Sort algorithm.
+ *
+ * Merge Sort is a divide and conquer algorithm that divides the input array into two halves,
+ * calls itself for the two halves, and then merges the two sorted halves.
+ *
+ * @param a The array of integers to be sorted.
+ * @param left The left index from where to start the sorting.
+ * @param right The right index where to end the sorting.
+ *
+ * Time complexity - O(n log n)
+ * Space complexity - O(n)
  */
 fun mergeSort(a: IntArray, left: Int, right: Int) {
     if (left < right) {
         val mid = (left + right) / 2
         mergeSort(a, left, mid)
-        mergeSort(a, mid+1, right)
+        mergeSort(a, mid + 1, right)
         merge(a, left, mid, right)
     }
 }
-
