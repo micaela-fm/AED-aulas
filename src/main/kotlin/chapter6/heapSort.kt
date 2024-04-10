@@ -50,6 +50,29 @@ fun maxHeapify(array: Array<Int>, n: Int, pos: Int) {
     }
 }
 
+fun minHeapify(array: Array<Utente?>, size: Int, i: Int, cmp: (u1: Utente, u2: Utente) -> Int) {
+    var pai = i
+    while (pai < size) {
+        val left = 2 * pai + 1
+        val right = 2 * pai + 2
+
+        if (left < size && cmp(array[left]!!, array[pai]!!) < 0) {
+            pai = left
+        }
+        if (right < size && cmp(array[right]!!, array[pai]!!) < 0) {
+            pai = right
+        }
+
+        if(pai!=i){
+            val temp = array[pai]
+            array[pai] = array[pai]
+            array[pai] = temp
+            minHeapify(array, size, pai, cmp)
+        }
+    }
+}
+
+
 /**
  * This function transforms a max heap into a sorted array.
  *

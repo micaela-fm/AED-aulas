@@ -2,6 +2,8 @@ package chapter6
 
 import chapter2.exchange
 
+val cmp = {u1:Utente, u2:Utente-> u1.priority-u2.priority}
+
 /**
  * Data class representing a user with a name, id, and priority.
  *
@@ -65,7 +67,7 @@ fun PriorityQueue.minHeapify(pos: Int) {
     val r = right(pos)
     if (l < size && cmp(array[l], array[pos]) < 0)
         pai = l
-    if (l < size && cmp(array[l], array[pai]) > 0)
+    if (r < size && cmp(array[r], array[pai]) < 0)
         pai = r
     if (pai != pos) {
         exchange(array, pai, pos)
@@ -98,7 +100,7 @@ fun PriorityQueue.peek(): Utente? {
 fun PriorityQueue.offer(utente: Utente): Boolean {
     if (size == array.size) return false
     array[size++] = utente
-    this.decreaseKey(size, size - 1, cmp)
+    decreaseKey(size, size - 1, cmp)
     return true
 }
 
