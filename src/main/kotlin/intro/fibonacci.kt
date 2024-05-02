@@ -1,4 +1,4 @@
-package chapter1
+package intro
 
 /**
  * This function calculates the Fibonacci number at a given position in a recursive manner.

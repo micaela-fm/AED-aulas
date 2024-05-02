@@ -1,6 +1,6 @@
-package chapter6
+package `priority-queue`
 
-import chapter2.exchange
+import `sorting-algorithms`.exchange
 
 /**
  * This function calculates the left child index of a node in a binary heap.

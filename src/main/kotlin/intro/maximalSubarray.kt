@@ -1,4 +1,4 @@
-package chapter1
+package intro
 
 /**
  * A data class representing a Triple of integers.

@@ -1,4 +1,4 @@
-package chapter3
+package complexity
 
 /**
  * This function removes all spaces from a given string.

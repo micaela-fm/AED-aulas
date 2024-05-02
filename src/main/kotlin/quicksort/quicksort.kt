@@ -1,6 +1,6 @@
-package chapter7
+package quicksort
 
-import chapter2.exchange
+import `sorting-algorithms`.exchange
 import java.util.*
 
 /**

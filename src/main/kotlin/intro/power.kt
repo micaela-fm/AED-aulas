@@ -1,4 +1,4 @@
-package chapter1
+package intro
 
 /**
  * This function calculates the power of a number in a recursive manner.
