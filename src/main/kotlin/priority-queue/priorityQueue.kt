@@ -1,6 +1,6 @@
-package chapter6
+package `priority-queue`
 
-import chapter2.exchange
+import `sorting-algorithms`.exchange
 
 val cmp = {u1:Utente, u2:Utente-> u1.priority-u2.priority}
 

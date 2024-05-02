@@ -1,3 +1,5 @@
+package stack
+
 interface Stack<E> {
     fun push(value: E)
     fun pop():E?

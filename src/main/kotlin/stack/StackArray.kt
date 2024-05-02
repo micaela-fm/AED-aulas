@@ -1,3 +1,5 @@
+package stack
+
 class StackArray<E>: Stack<E> {
 
     private var elements:Array<E?>

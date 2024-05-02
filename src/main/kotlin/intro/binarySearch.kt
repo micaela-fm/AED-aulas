@@ -1,4 +1,4 @@
-package chapter1
+package intro
 
 /**
  * This function performs a binary search in a sorted array in a recursive manner.

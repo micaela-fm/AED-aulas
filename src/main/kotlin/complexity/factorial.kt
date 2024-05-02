@@ -1,4 +1,4 @@
-package chapter3
+package complexity
 
 /**
  * This function calculates the factorial of a given integer.
