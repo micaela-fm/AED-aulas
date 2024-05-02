@@ -1,6 +1,6 @@
 package quicksort
 
-import `sorting-algorithms`.exchange
+import sortingAlgorithms.exchange
 import java.util.*
 
 /**

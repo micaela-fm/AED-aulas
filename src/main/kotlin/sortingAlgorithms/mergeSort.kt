@@ -1,4 +1,4 @@
-package `sorting-algorithms`
+package sortingAlgorithms
 
 /**
  * This function merges two sorted arrays into a single sorted array.

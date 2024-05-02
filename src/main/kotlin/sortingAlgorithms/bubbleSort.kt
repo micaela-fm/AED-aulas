@@ -1,4 +1,4 @@
-package `sorting-algorithms`
+package sortingAlgorithms
 
 /**
  * This function sorts an array using the Bubble Sort algorithm.
