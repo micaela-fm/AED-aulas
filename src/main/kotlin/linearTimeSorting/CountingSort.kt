@@ -1,4 +1,4 @@
-package `linear-time-sorting`
+package linearTimeSorting
 
 fun countingSort(arrayA: IntArray, min: Int, max: Int): IntArray {
     val arrayB = IntArray(arrayA.size)

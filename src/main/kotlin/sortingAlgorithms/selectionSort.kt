@@ -1,4 +1,4 @@
-package `sorting-algorithms`
+package sortingAlgorithms
 
 /**
  * This function exchanges the elements at two positions in an integer array.

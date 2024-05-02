@@ -1,6 +1,6 @@
-package `priority-queue`
+package priorityQueue
 
-import `sorting-algorithms`.exchange
+import sortingAlgorithms.exchange
 
 /**
  * This function calculates the left child index of a node in a binary heap.
