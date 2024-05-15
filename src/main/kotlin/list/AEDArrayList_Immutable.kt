@@ -6,7 +6,9 @@ class AEDArrayList_Immutable<E>: AEDList<E>{
         elements=array
     }
 
-    override var size: Int = 0
+
+    override var size: Int =0
+
 
     override fun get(i: Int): E {
         return elements[i]
