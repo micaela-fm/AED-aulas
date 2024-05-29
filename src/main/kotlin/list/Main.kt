@@ -11,5 +11,4 @@ fun main() {
     val list3=AEDArrayList<Int>()
     val list4=AEDLinkedList<String>()
     val list5=AEDLinkedList<Int>()
-    list5.
 }
