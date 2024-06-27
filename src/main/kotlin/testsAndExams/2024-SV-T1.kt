@@ -1,7 +1,6 @@
 package testsAndExams
 
-import java.util.PriorityQueue
-
+// PARTE 1
 /*
 1. (7) (FOLHA 1)
 Realize a função fun existsPair( array1: Array<Int>, array2: Array<Int>, value: Int ): Boolean
@@ -65,4 +64,3 @@ fun count(array: Array<Char>): Int {
     }
     return counter
 }
-
