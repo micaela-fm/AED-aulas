@@ -83,7 +83,7 @@ class AEDHashSet<E>:AEDSet<E> {
         for(j in 0 until elements.size){
             var current:Node<E>?=elements[j]
             while(current!=null){
-             //   elements[j]= elements[j].let{it?.next}
+                //   elements[j]= elements[j].let{it?.next}
                 elements[j]= checkNotNull(elements[j]).next
                 //ligar o current à nova lista
                 val k= index(current.item)
@@ -96,11 +96,11 @@ class AEDHashSet<E>:AEDSet<E> {
         }
         elements=newTable
     }
- //Um conjunto sem repetições
+    //Um conjunto sem repetições
     override fun add(element: E): Boolean {
         if(search(element) != null) return false
-     else{
-         if( size.toDouble()/m>=LOADFACTOR) expand()
+        else{
+            if( size.toDouble()/m>=LOADFACTOR) expand()
             val  new=Node<E>(element)
             val i=index(element)
             new.next=elements[i]
